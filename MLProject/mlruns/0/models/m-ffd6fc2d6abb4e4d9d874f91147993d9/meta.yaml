@@ -1,0 +1,10 @@
+artifact_location: file:///home/runner/work/Membuat_Workflow-CI/Membuat_Workflow-CI/MLProject/mlruns/0/models/m-ffd6fc2d6abb4e4d9d874f91147993d9/artifacts
+creation_timestamp: 1780669656524
+experiment_id: '0'
+last_updated_timestamp: 1780669659087
+model_id: m-ffd6fc2d6abb4e4d9d874f91147993d9
+model_type: null
+name: model
+source_run_id: 5ceecfeb1a4c49c49fa4d413a1650bee
+status: 2
+status_message: null
