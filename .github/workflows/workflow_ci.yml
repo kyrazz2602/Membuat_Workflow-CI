@@ -36,6 +36,7 @@ jobs:
         env:
           MLFLOW_TRACKING_URI: file://${{ github.workspace }}/MLProject/mlruns
         run: |
+          rm -rf MLProject/mlruns
           mlflow run MLProject --env-manager local
 
       # 5. Build Docker Image using mlflow

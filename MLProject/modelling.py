@@ -64,10 +64,16 @@ def main():
         try:
             model_uri = mlflow.get_artifact_uri("model")
             print(f"Model URI: {model_uri}")
-            parent_dir = os.path.dirname(current_dir)
-            with open(os.path.join(parent_dir, "latest_model_uri.txt"), "w") as f:
+            
+            # Resolve target directory: use GITHUB_WORKSPACE in CI environment, otherwise use parent directory
+            if "GITHUB_WORKSPACE" in os.environ:
+                target_dir = os.environ["GITHUB_WORKSPACE"]
+            else:
+                target_dir = os.path.dirname(current_dir)
+                
+            with open(os.path.join(target_dir, "latest_model_uri.txt"), "w") as f:
                 f.write(model_uri)
-            print("Successfully saved model URI to latest_model_uri.txt")
+            print(f"Successfully saved model URI to: {os.path.join(target_dir, 'latest_model_uri.txt')}")
         except Exception as e:
             print(f"Warning: Could not save model URI: {e}")
 
