@@ -46,6 +46,10 @@ def main():
         model = RandomForestClassifier(random_state=42)
         model.fit(X_train, y_train)
         
+        # Explicitly log the model to resolve autologging version warning/skipping issues
+        print("Logging model explicitly to artifacts/model...")
+        mlflow.sklearn.log_model(model, "model")
+        
         # Predictions
         y_pred = model.predict(X_test)
         
