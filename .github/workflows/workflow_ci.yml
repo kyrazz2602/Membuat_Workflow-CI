@@ -46,6 +46,8 @@ jobs:
 
       # 5. Build Docker Image using mlflow
       - name: Build Docker Image
+        env:
+          MLFLOW_TRACKING_URI: file://${{ github.workspace }}/MLProject/mlruns
         run: |
           MODEL_URI=$(cat latest_model_uri.txt)
           echo "Building Docker image for model at: $MODEL_URI"

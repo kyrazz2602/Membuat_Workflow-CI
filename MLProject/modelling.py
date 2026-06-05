@@ -66,7 +66,7 @@ def main():
         
         # Save model URI for CI/CD workflow use
         try:
-            model_uri = mlflow.get_artifact_uri("model")
+            model_uri = f"runs:/{run.info.run_id}/model"
             print(f"Model URI: {model_uri}")
             
             # Resolve target directory: use GITHUB_WORKSPACE in CI environment, otherwise use parent directory
