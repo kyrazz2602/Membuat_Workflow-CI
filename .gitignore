@@ -1,0 +1,13 @@
+# Temporary files
+powershell.cmd
+latest_model_uri.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS files
+.DS_Store
+Thumbs.db

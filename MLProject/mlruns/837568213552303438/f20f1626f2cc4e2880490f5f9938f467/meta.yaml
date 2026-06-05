@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ariza/OneDrive/Dokumen/Dokumentasi Belajar/Project-Arizal/ML
+  Project/SMSML_Arizal-Anshori/Workflow-CI/MLProject/mlruns/837568213552303438/f20f1626f2cc4e2880490f5f9938f467/artifacts
+end_time: 1780665714943
+entry_point_name: ''
+experiment_id: '837568213552303438'
+lifecycle_stage: active
+run_id: f20f1626f2cc4e2880490f5f9938f467
+run_name: nebulous-lynx-984
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780665694828
+status: 3
+tags: []
+user_id: ariza
