@@ -1,1 +1,1 @@
-https://hub.docker.com/r/kyrazz2602/workflow-ci
+https://hub.docker.com/repository/docker/kyrazz2602/workflow-ci/general

@@ -34,7 +34,7 @@ jobs:
       # 4. Run the MLflow Project
       - name: Run MLflow Project
         run: |
-          mlflow run MLProject --no-conda
+          mlflow run MLProject --env-manager local
 
       # 5. Build Docker Image using mlflow
       - name: Build Docker Image
