@@ -12,15 +12,13 @@ from sklearn.metrics import classification_report, accuracy_score
 import mlflow
 
 def main():
-    # Set local tracking URI explicitly to ensure runs are logged in the Membangun_model directory
-    # If the script is run from Membangun_model, it will create mlruns inside it.
-    # Otherwise if run from parent, it is redirected accordingly.
+    # Set local tracking URI explicitly to ensure runs are logged in the MLProject/mlruns directory
+    # Only do this if not running within an MLflow Project run to avoid tracking conflicts
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    mlruns_path = os.path.join(current_dir, "mlruns")
-    mlflow.set_tracking_uri(f"file:///{mlruns_path}".replace("\\", "/"))
-    
-    # Set experiment name
-    mlflow.set_experiment("Heart_Disease_Status_Basic")
+    if "MLFLOW_RUN_ID" not in os.environ:
+        mlruns_path = os.path.join(current_dir, "mlruns")
+        mlflow.set_tracking_uri(f"file:///{mlruns_path}".replace("\\", "/"))
+        mlflow.set_experiment("Heart_Disease_Status_Basic")
     
     # Enable autolog
     mlflow.autolog()

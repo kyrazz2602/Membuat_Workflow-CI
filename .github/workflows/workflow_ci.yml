@@ -33,6 +33,8 @@ jobs:
 
       # 4. Run the MLflow Project
       - name: Run MLflow Project
+        env:
+          MLFLOW_TRACKING_URI: file://${{ github.workspace }}/MLProject/mlruns
         run: |
           mlflow run MLProject --env-manager local
 
