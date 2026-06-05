@@ -1,8 +1,7 @@
-artifact_location: file:///C:/Users/ariza/OneDrive/Dokumen/Dokumentasi Belajar/Project-Arizal/ML
-  Project/SMSML_Arizal-Anshori/Workflow-CI/MLProject/mlruns/0
-creation_time: 1780665692822
+artifact_location: file:///home/runner/work/Membuat_Workflow-CI/Membuat_Workflow-CI/MLProject/mlruns/0
+creation_time: 1780668103480
 experiment_id: '0'
-last_update_time: 1780665692822
+last_update_time: 1780668103480
 lifecycle_stage: active
 name: Default
 trace_location: null

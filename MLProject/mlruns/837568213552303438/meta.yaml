@@ -1,9 +1,0 @@
-artifact_location: file:///C:/Users/ariza/OneDrive/Dokumen/Dokumentasi Belajar/Project-Arizal/ML
-  Project/SMSML_Arizal-Anshori/Workflow-CI/MLProject/mlruns/837568213552303438
-creation_time: 1780665692943
-experiment_id: '837568213552303438'
-last_update_time: 1780665692943
-lifecycle_stage: active
-name: Heart_Disease_Status_Basic
-trace_location: null
-workspace: default
