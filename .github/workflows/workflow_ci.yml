@@ -39,6 +39,11 @@ jobs:
           rm -rf MLProject/mlruns
           mlflow run MLProject --env-manager local
 
+      # Diagnostic: print the directories and files created
+      - name: List MLflow runs directory
+        run: |
+          ls -R MLProject/mlruns
+
       # 5. Build Docker Image using mlflow
       - name: Build Docker Image
         run: |
